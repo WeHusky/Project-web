@@ -1,0 +1,390 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #90b9bb;
+  --secondary-color: #4508fb;
+  --text-dark: #0f172a;
+  --text-light: #94a3b8;
+  --extra-light: #e2e8f0;
+  --white: #ffffff;
+  --max-width: 1400px;
+  --body-clr: #f6f9fe;
+  --primary-clr: #05555c;
+  --primary-light-clr: #eaf3fa;
+  --links-clr: #186f78;
+  --text-clr: #3f7277;
+ 
+
+ 
+    
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: flex;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  
+}
+
+header {
+  align-items: center;
+  
+  
+}
+
+
+
+/************************/
+/*      nav   */
+/************************/
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+
+}
+
+.main-nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; 
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  position: fixed;
+  width: 100%;
+  align-items: center;
+  border-radius: 50px 50px;
+  border: 0px solid rgba(255, 255, 255, 0.1);
+  transition: backdrop-filter 2.5s ease;
+  backdrop-filter: blur(20px);
+  max-width: 490px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  transition: transform 0.6s ease, border 0.6s ease, backdrop-filter 0.6s ease;
+  border: none;
+}
+
+nav {
+  position: relative;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  z-index: 100;
+}
+
+.nav.scrolled {
+  transform: translateY(10px);
+  border: 0px solid rgba(35, 46, 53, 0.1);
+  
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+nav ul li :hover {
+  color:#91A368;
+  transition: 0.8s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: ''; /* Menambahkan konten kosong untuk pseudo-element */
+  position: absolute; /* Menjadikan posisi absolut */
+  bottom: -2px; /* Menempatkan pseudo-element di bawah teks */
+  left: 0; /* Menempatkan pseudo-element di sebelah kiri */
+  width: 0; /* Mulai dengan lebar 0 */
+  height: 2px; /* Ketebalan garis */
+  background-color:#91A368; /* Warna garis */
+  transition: width 0.8s ease; /* Transisi lebar dengan efek lambat */
+  
+}
+
+nav ul li a:hover::after {
+  width: 100%; /* Membuat lebar pseudo-element menjadi 100% saat hover */
+}
+
+
+/************************/
+/*     1. Hero    */
+/************************/
+
+
+
+.content p {
+  max-width: 350px;
+  margin-bottom: 2rem;
+  line-height: 1.5rem;
+  color: var(--extra-light);
+}
+
+.content .btn {
+  padding: 0.75rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  background-color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.section__container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.section__header {
+  font-size: 2.6rem;
+  font-weight: 700;
+  font-family: var(--header-font);
+  text-align: center;
+  color: var(--text-dark);
+  padding-bottom: 3%;
+}
+
+.section__subheader {
+  position: relative;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.section__subheader::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: -3rem;
+  height: 2rem;
+  width: 2px;
+  }
+
+
+
+/**********************************/
+/*     hotel   */
+/**********************************/	
+
+button-group{
+  text-align: center;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+.button-group{
+  text-align: center;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+.button-group .button{
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #c8d1d8;
+  color: var(--primary-clr);
+  font-style: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.4s;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+.button-group .button.active{
+  background-color: var(--primary-clr);
+  color: var(--body-clr);
+}
+.button-group .button:hover{
+  background-color: var(--primary-clr);
+  color: var(--body-clr);
+}
+
+
+.blogs__grid {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.blogs__card {
+  position: relative; /* Menambahkan posisi relatif pada kartu */
+  overflow: hidden;
+  border: 2px solid var(--extra-light);
+  border-radius: 13px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.5s ease; /* Smooth transition for transform and shadow */
+}
+
+.blogs__card:hover {
+  transform: scale(1.05); /* Scales up the card slightly */
+  box-shadow: 0  4px 20px 5px rgba(0,0,0,0.25); /* Adds shadow to lift the card visually */
+}
+
+.user{
+  color: #000;
+}
+
+.gak-ketemu {
+  text-align: center; 
+  scale: 1;
+}
+
+.blogs__content {
+  padding: 1rem;
+}
+
+.blogs__content h5 {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--secondary-color);
+}
+
+.blogs__content h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: var(--header-font);
+  color: var(--text-dark);
+}
+
+.blogs__content p {
+  margin-bottom: 1rem;
+  color: var(--text-light);
+}
+
+.blogs__content a {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.blogs__content a:hover {
+  color: var(--secondary-color);
+}
+
+.rating {
+  position: absolute; /* Mengubah posisi rating menjadi absolut */
+  bottom: 0; /* Menempatkan rating di bagian bawah kartu */
+  left: 10px; /* Menempatkan rating di bagian kiri kartu */
+  width: 100%; /* Membuat rating memenuhi lebar kartu */
+  padding: 5px; /* Memberikan padding pada rating */
+  box-sizing: border-box; /* Mengatur box-sizing untuk menghindari overflow */
+  display: flex; /* Menggunakan flexbox untuk menyusun teks dan bintang secara horizontal */
+  align-items: center; /* Menengahkan item-item secara vertikal */
+}
+
+.rating span {
+  margin-right: 10px; /* Memberikan jarak antara teks "Rating :" dan bintang */
+  font-weight: bold; /* Membuat teks "Rating :" lebih menonjol */
+  color: var(--secondary-color);
+}
+
+.stars {
+  display: flex;
+  align-items: center; /* Menengahkan bintang-bintang secara vertikal */
+}
+
+.star {
+  width: 16px; /* Atur ukuran bintang sesuai keinginan */
+  height: 16px; /* Atur ukuran bintang sesuai keinginan */
+  margin-right: 4px; /* Memberikan jarak antar bintang */
+}
+
+.star:last-child {
+  margin-right: 0; /* Menghapus jarak di akhir bintang */
+}
+
+/* Style untuk panah navigasi */
+.navigation-arrows {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.arrow {
+  cursor: pointer;
+  font-size: 24px; /* Ukuran panah */
+}
+
+.hidden {
+  display: none; /* Sembunyikan elemen */
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-container:hover .overlay {
+    opacity: 1;
+  }
+  
+  .book-now {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  .book-now:hover {
+    background-color: #ddd;
+  }
+
+
+

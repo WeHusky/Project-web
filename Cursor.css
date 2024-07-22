@@ -1,0 +1,27 @@
+.cursor {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ff6f61; /* Warna latar belakang */
+    pointer-events: none; /* Kursor tidak bereaksi terhadap event mouse */
+    transform: translate(-50%, -50%);
+    animation: pulse 1.5s infinite alternate; /* Animasi pulsasi */
+    z-index: 9999; /* Untuk menampilkan di atas elemen lain */
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1); /* Ukuran normal */
+      opacity: 1; /* Opacity normal */
+    }
+    100% {
+      transform: scale(1.2); /* Ukuran sedikit diperbesar */
+      opacity: 0.7; /* Opacity sedikit dikurangi */
+    }
+  }
+  
+  body {
+    cursor: none; /* Menyembunyikan kursor default browser */
+  }
+  
